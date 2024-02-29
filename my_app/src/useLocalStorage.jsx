@@ -8,6 +8,7 @@ function useLocalStorage(key , initialValue) {
 
     useEffect(() => {
         localStorage.setItem(key, value);
+        sessionStorage.setItem(key, value);
     }, [key, value]);
 
     return [value, setValue];
